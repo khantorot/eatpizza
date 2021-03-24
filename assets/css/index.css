@@ -1,0 +1,101 @@
+.glide_banner{
+    max-height: calc(70vh - 90px);
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.glide_banner .banner img{
+    width: 100%;
+}
+
+
+.catolog_content{
+    margin: 30px 0px;
+}
+
+
+.catolog_list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.catolog_list .catolog_elem{
+    padding: 8px 16px;
+    margin: 0px 5px 5px 0px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 2px solid var(--index);
+    transition: 0.2s;
+}
+
+.catolog_list .choosen_catolog_elem{
+    background: var(--index);
+    color: var(--index2);
+    user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about_section{
+    margin: 80px 0px;
+}
+
+.about_section img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about_section h2{
+    margin-top: 20px;
+}
+
+.about_section h4{
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.about_section a{
+    color: var(--index);
+}
+
+.about_section ul{
+    background: var(--index3);
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    
+}
+
+.about_section ul li{
+    list-style: none;
+    margin-left: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.about_section p{
+    font-size: 18px;
+    line-height: 25px;
+}
+
+
+
+
+

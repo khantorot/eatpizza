@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat Market</title>
+    <link rel="shortcut icon" href="./content/icons/shortcut.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/cart.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <canvas id="pizza"></canvas>
+    </div>
+    
+    <nav>
+        <a href="./index.html" class="logo">
+            <p>eat</p>
+            <img src="./content/icons/logo.svg" alt="">
+        </a>
+        <a href="./cart.html" class="cart_btn">
+            <span class="total_count"></span>
+            <img src="./content/icons/cart.svg" alt="cart">
+        </a>
+        <div class="call_btn">
+            <div class="call_block">
+                <span class="call"><img src="./content/icons/call_btn.svg" alt="mobile"></span>
+                <div class="networks">
+                    <a href="tel:+996702770727"><img src="./content/icons/call.svg"
+                            alt="phone"></a>
+                    <a href="mailto:ChingizOdin@protonmail.com"><img src="./content/icons/mail.svg"
+                            alt="mail"></a>
+                    <a href="https://wa.me/+996702770727?text=Я%20хочу%20вступить%20в%20innovation" target="_blank"><img
+                            src="./content/icons/whatsapp.svg" alt="whatsapp"></a>
+                </div>
+            </div>
+        </div>
+        <div class="menu_btn"><span></span></div>
+        <div class="menu">
+            <div class="menu_catolog_list">
+                <div class="catolog_elem" data-name="discount">Акции</div>
+                <div class="catolog_elem" data-name="popular">Хит</div>
+                <div class="catolog_elem" data-name="new">Новое</div>
+                <div class="catolog_elem" data-name="pizza">Пицца</div>
+                <div class="catolog_elem" data-name="salad">Салат</div>
+                <div class="catolog_elem" data-name="drink">Напитки</div>
+            </div>
+            <div class="menu_contact_list">
+                <p>10:00 - 24:00 | Пн - Вс</p>
+                <a href="">+996 700 132 324</a>
+                <a href="">Токтогула 13, Бишкек</a>
+                <a href="">Обратный звонок</a>
+                <a href="./cart.html">Корзина</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <section class="cart_content">
+            <a href="./index.html" class="go_back_btn"><img src="./content/icons/arrow.svg" alt="arrow">Магазин</a>
+        <h2 class="section_title">Корзина</h2>
+            <div class="help_block">
+                <h4>Вы еще ничего не купили</h4>
+                <img src="./content/images/noproduct.png">
+            </div>
+            <div class="cart_list"></div>
+        </section>
+        <section class="total_block">
+            <div>Цена без  скидки<span class="total_discount"></span></div>
+            <div>К оплате<span class="total_sum"></span></div>
+            <a href="./checkout.html">Продолжить</a>
+        </section>
+        <section class="discount_content">
+            <h2 class="section_title">Спешите купить по акции</h2>
+            <div class="product_container"></div>
+        </section>
+        <section class="callback_section">
+            <h2>Вам перезваонить?</h2>
+            <h4>Оставьте номер</h4>
+            <form action="">
+                <input type="text" placeholder="Ваш номер телефона">
+                <button>Отправить</button>
+            </form>
+        </section>
+        <footer>
+            <div class="contact_boxes">
+                <ul>
+                    <h4>Кухни</h4>
+                    <li><a href="" class="catolog_elem" data-name="discount">Акции</a></li>
+                    <li><a href="" class="catolog_elem" data-name="popular">Хит</a></li>
+                    <li><a href="" class="catolog_elem" data-name="new">Новое</a></li>
+                    <li><a href="" class="catolog_elem" data-name="pizza">Пицца</a></li>
+                    <li><a href="" class="catolog_elem" data-name="salad">Салат</a></li>
+                    <li><a href="" class="catolog_elem" data-name="drink">Напитки</a></li>
+                </ul>
+                <ul>
+                    <h4>О нас</h4>
+                    <li><p>10:00 - 24:00</p></li>
+                    <li><a href="">перезваонить?</a></li>
+                    <li><a href="">Вакансии</a></li>
+                    <li><a href="">Моя корзина</a></li>
+                </ul>
+                <ul>
+                    <h4>Контакты</h4>
+                    <li><a href="">+996 700 132 324</a></li>
+                    <li><a href="">Токтогула 13, Бишкек</a></li>
+                    <li><a href="">обратный звонок</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/cart.js"></script>
+</body>
+
+</html>
