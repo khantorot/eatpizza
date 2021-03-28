@@ -5,7 +5,7 @@ function hidePreloader() {
     setTimeout(function () {
         body.classList.remove('scrollable');
         preloader.classList.add('preloader_hide');
-    }, 1000)
+    }, 500)
 }
 
 
@@ -160,9 +160,23 @@ const menu = document.querySelector('.menu');
 
 
 menu_btn.addEventListener('click', function(){
-    this.classList.toggle('menu_btn_active');
+    menu_btn.classList.toggle('menu_btn_active');
     menu.classList.toggle('menu_show');
+});
+
+const menu_list_item = document.querySelectorAll('.menu_catolog_list');
+
+document.querySelector('.container').addEventListener('click', function(){
+    menu_btn.classList.remove('menu_btn_active');
+    menu.classList.remove('menu_show');
 })
+
+menu_list_item.forEach(element => {
+    element.addEventListener('click', function(){
+        menu_btn.classList.remove('menu_btn_active');
+        menu.classList.remove('menu_show');
+    })
+});
 
 
 
@@ -171,7 +185,7 @@ const networks = document.querySelector('.networks');
 
 call_btn.addEventListener('click', function () {
     networks.classList.toggle('networks_active');
-})
+});
 
 
 
@@ -217,7 +231,7 @@ class Pizza {
 
                 rad = this.sliceRadians * i + this.progress
 
-                ctx.strokeStyle = '#FBC02D'
+                ctx.strokeStyle = '#fdbe36'
                 cheese(ctx, rad, .9, ii, this.sliceSize, this.sliceDegree)
                 cheese(ctx, rad, .6, ii, this.sliceSize, this.sliceDegree)
                 cheese(ctx, rad, .5, ii, this.sliceSize, this.sliceDegree)
@@ -230,7 +244,7 @@ class Pizza {
             ctx.lineCap = 'butt'
             ctx.lineWidth = 11
             ctx.arc(0, 0, this.sliceSize, rad, rad + this.sliceRadians)
-            ctx.strokeStyle = '#F57F17'
+            ctx.strokeStyle = '#f94f32'
             ctx.stroke()
 
             // slice
@@ -239,7 +253,7 @@ class Pizza {
             let endX = this.sliceSize * Math.cos(rad + this.sliceRadians)
             let endY = this.sliceSize * Math.sin(rad + this.sliceRadians)
             let varriation = [0.9, 0.7, 1.1, 1.2]
-            ctx.fillStyle = '#FBC02D'
+            ctx.fillStyle = '#fdbe36'
             ctx.beginPath()
             ctx.moveTo(0, 0)
             ctx.lineTo(startX, startY)
@@ -255,7 +269,7 @@ class Pizza {
             let y = this.sliceSize * .65 * Math.sin(rad + this.sliceRadians / 2)
             ctx.beginPath()
             ctx.arc(x, y, this.sliceDegree / 6, 0, 2 * Math.PI)
-            ctx.fillStyle = '#D84315'
+            ctx.fillStyle = '#f94f32'
             ctx.fill()
 
         }

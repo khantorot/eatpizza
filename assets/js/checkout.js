@@ -6,6 +6,8 @@ function loadPage() {
 
     showCheck(check);
     countGoods(total_count);
+
+    window.addEventListener('load', hidePreloader);
 }
 
 

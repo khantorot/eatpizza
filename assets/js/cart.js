@@ -21,6 +21,8 @@ function loadPage() {
 
     cart_list.addEventListener('click', tuneCart);
     discount_list.addEventListener('click', tuneCart);
+
+    window.addEventListener('load', hidePreloader);
 }
 
 function loadTotal(help_block, total_block) {
