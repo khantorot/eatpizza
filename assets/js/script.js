@@ -98,7 +98,7 @@ function loadGoods(place, source, group) {
                 out += '<img src="./content/icons/discount.svg" class="product_icon">';
                 out += '<span class="discount">' + str(data[key].discount) + '</span>';
             }
-            if (data[key].group.indexOf('popular') == 1){
+            if (data[key].group.indexOf('popular') == 1) {
                 out += '<img src="./content/icons/popular.svg" class="product_icon">';
             }
             if (data[key].group.indexOf('new') == 1) {
@@ -134,9 +134,9 @@ function str(src) {
 
 
 const config_banner = {
-	type: 'carousel',
-	autoplay: false,
-	perView: 1
+    type: 'carousel',
+    autoplay: 3000,
+    perView: 1
 }
 
 
@@ -149,7 +149,14 @@ function sumOfMass(mass) {
     return sum;
 }
 
+function getGroup(e) {
+	if (e.target.classList.contains('catolog_elem')) {
+		let name = e.target.getAttribute('data-name');
 
+		localStorage.setItem('good_group', JSON.stringify(name));
+		loadPage();
+	}
+}
 
 
 
@@ -159,20 +166,20 @@ const menu_btn = document.querySelector('.menu_btn');
 const menu = document.querySelector('.menu');
 
 
-menu_btn.addEventListener('click', function(){
+menu_btn.addEventListener('click', function () {
     menu_btn.classList.toggle('menu_btn_active');
     menu.classList.toggle('menu_show');
 });
 
-const menu_list_item = document.querySelectorAll('.menu_catolog_list');
+const menu_list_item = document.querySelectorAll('.menu a');
 
-document.querySelector('.container').addEventListener('click', function(){
+document.querySelector('.container').addEventListener('click', function () {
     menu_btn.classList.remove('menu_btn_active');
     menu.classList.remove('menu_show');
 })
 
 menu_list_item.forEach(element => {
-    element.addEventListener('click', function(){
+    element.addEventListener('click', function () {
         menu_btn.classList.remove('menu_btn_active');
         menu.classList.remove('menu_show');
     })
@@ -187,6 +194,33 @@ call_btn.addEventListener('click', function () {
     networks.classList.toggle('networks_active');
 });
 
+
+
+
+let linkNav = document.querySelectorAll('[href^="#"]'),
+    V = 0.6;
+for (var i = 0; i < linkNav.length; i++) {
+    linkNav[i].addEventListener('click', function (e) {
+        e.preventDefault();
+        let w = window.pageYOffset,
+            hash = this.href.replace(/[^#]*(.*)/, '$1');
+        t = document.querySelector(hash).getBoundingClientRect().top,
+            start = null;
+        requestAnimationFrame(step);
+
+        function step(time) {
+            if (start === null) start = time;
+            let progress = time - start,
+                r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
+            window.scrollTo(0, r);
+            if (r != w + t) {
+                requestAnimationFrame(step)
+            } else {
+                location.hash = hash
+            }
+        }
+    }, false);
+}
 
 
 

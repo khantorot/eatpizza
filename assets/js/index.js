@@ -8,7 +8,7 @@ function loadPage() {
 	if (localStorage.getItem('good_group') != null)
 		good_group = JSON.parse(localStorage.getItem('good_group'));
 	else
-		good_group = 'popular';
+		good_group = 'all';
 
 	document.querySelectorAll('.catolog_elem').forEach(element => {
 		if (element.getAttribute('data-name') == good_group) {
@@ -23,19 +23,10 @@ function loadPage() {
 	product_container.addEventListener("click", tuneCart);
 	catolog_content.addEventListener('click', getGroup);
 	window.addEventListener('load', hidePreloader);
-
-	new Glide(".glide_banner", config_banner).mount();
 }
 
 
-function getGroup(e) {
-	if (e.target.classList.contains('catolog_elem')) {
-		let name = e.target.getAttribute('data-name');
 
-		localStorage.setItem('good_group', JSON.stringify(name));
-		loadPage();
-	}
-}
 
 function choosenCatologElem(group) {
 	const catolog_elem = document.querySelectorAll('.catolog_elem');
@@ -47,3 +38,6 @@ function choosenCatologElem(group) {
 			element.classList.remove('choosen_catolog_elem');
 	});
 }
+
+
+new Glide(".glide_banner", config_banner).mount();

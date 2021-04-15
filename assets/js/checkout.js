@@ -3,11 +3,13 @@ loadPage();
 function loadPage() {
     const check = document.querySelector('.check');
     const total_count = document.querySelector('.total_count');
+    const catolog_content = document.querySelector('body');
 
     showCheck(check);
     countGoods(total_count);
 
     window.addEventListener('load', hidePreloader);
+    catolog_content.addEventListener('click', getGroup);
 }
 
 

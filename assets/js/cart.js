@@ -6,6 +6,7 @@ function loadPage() {
     const help_block = document.querySelector('.help_block');
     const total_block = document.querySelector('.total_block');
     const total_count = document.querySelector('.total_count');
+    const catolog_content = document.querySelector('body');
 
     if (Object.keys(cart).length == 0) {
         help_block.style.display = 'block';
@@ -21,6 +22,7 @@ function loadPage() {
 
     cart_list.addEventListener('click', tuneCart);
     discount_list.addEventListener('click', tuneCart);
+    catolog_content.addEventListener('click', getGroup);
 
     window.addEventListener('load', hidePreloader);
 }

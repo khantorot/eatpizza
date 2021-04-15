@@ -113,7 +113,7 @@ nav{
     max-width: 1200px;
     width: calc(100% - 20px);
     height: 70px;
-    background: var(--index);
+    background: rgba(161, 57, 192, 0.7);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     z-index: 1;
@@ -243,11 +243,10 @@ nav{
 .menu_catolog_list{
     font-size: 25px;
     line-height: 35px;
+    display: flex;
+    flex-direction: column;
 }
 
-.menu_catolog_list div{
-    cursor: pointer;
-}
 
 
 .menu_contact_list{
@@ -278,9 +277,9 @@ nav{
 
 
 .call_btn{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -290,7 +289,7 @@ nav{
 }
 
 .call_btn img{
-    width: 50%;
+    width: 60%;
 }
 
 .call{
@@ -298,9 +297,9 @@ nav{
     justify-content: center;
     align-items: center;
     background: var(--index2);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
     position: relative;
     z-index: 5;
 }
@@ -313,7 +312,7 @@ nav{
     display: flex;
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 5px;
     justify-content:center;
     transition: ease-out 0.3s;
     align-items: center;
@@ -341,7 +340,7 @@ nav{
 }
 
 .networks a img{
-    width: 70%;
+    width: 60%;
 }
     
 .networks a:nth-child(1){
@@ -390,9 +389,9 @@ nav{
 .cart_btn{
     position: relative;
     background: var(--index2);
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -419,11 +418,10 @@ nav{
 
 
 .container{
-    padding: 10px 0px 60px 0px;
+    padding: 10px 0px 100px 0px;
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
-    overflow: hidden;
 }
 
 
@@ -443,6 +441,7 @@ nav{
 .callback_section{
     background: var(--index3);
     padding: 50px 20px;
+    margin: 50px 0px;
     border-radius: 10px;
 }
 
@@ -477,7 +476,6 @@ nav{
 
 
 footer{
-    margin: 50px 0px;
     border: 1px solid var(--index3);
     border-radius: 10px;
     padding: 20px;
@@ -671,6 +669,9 @@ footer{
     .good_card{
         width: calc(33.333% - 10px);
     }
+    .container{
+        padding: 0px 10px 100px 10px;
+    }
 }
 
 @media screen and (max-width: 950px) {
@@ -693,6 +694,5 @@ footer{
         margin-top: 20px;
         margin-left: 0;
     }
-    
 }
 
