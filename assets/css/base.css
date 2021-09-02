@@ -113,7 +113,7 @@ nav{
     max-width: 1200px;
     width: calc(100% - 20px);
     height: 70px;
-    background: rgba(161, 57, 192, 0.7);
+    background: var(--index);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     z-index: 1;
